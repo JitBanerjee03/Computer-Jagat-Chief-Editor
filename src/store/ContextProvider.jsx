@@ -112,7 +112,7 @@ export const ContextProvider=({children})=>{
         const token = urlToken || localToken;
 
         if (!token) {
-            window.location.href = 'https://journal-management-system-frontend.vercel.app/login';
+            window.location.href = 'https://computer-jagat.vercel.app/login';
             return;
         }
 
@@ -146,13 +146,13 @@ export const ContextProvider=({children})=>{
                 } else {
                     localStorage.removeItem('token');
                     setLoggedIn(false);
-                    window.location.href = 'https://journal-management-system-frontend.vercel.app/login';
+                    window.location.href = 'https://computer-jagat.vercel.app/login';
                 }
             } catch (error) {
                 console.error("Token validation error:", error);
                 localStorage.removeItem('token');
                 setLoggedIn(false);
-                window.location.href = 'https://journal-management-system-frontend.vercel.app/login';
+                window.location.href = 'https://computer-jagat.vercel.app/login';
             }
         };
         checkTokenValidation();
